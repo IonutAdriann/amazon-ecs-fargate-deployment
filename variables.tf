@@ -1,3 +1,5 @@
+# the purpose of this file is to put all the variables that we need to use in the setup of this application
+
 variable "aws_access_key" {
     description = "IAM public access key"   
 }
