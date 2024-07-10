@@ -56,3 +56,8 @@ variable "fargate_container_memory" {
     description = "Value of the memory to allocate to the container"
     default     = "2048"
 }
+
+variable "application_port" {
+    description = "The port exposed by the docker image that the traffic goes through"
+    default     = 3000
+}
