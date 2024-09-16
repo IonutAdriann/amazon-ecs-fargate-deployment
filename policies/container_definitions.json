@@ -1,0 +1,23 @@
+[
+  {
+    "name": "app-container-definition",
+    "image": "${ecr_image_url}",
+    "cpu": "${fargate_container_cpu}",
+    "memory": "${fargate_container_memory}",
+    "networkMode": "awsvpc",
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/container-app",
+        "awslogs-region": "${aws_region}",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "portMappings": [
+      {
+        "containerPort": "${app_port}",
+        "hostPort": "${app_port}"
+      }
+    ]
+  }
+]
